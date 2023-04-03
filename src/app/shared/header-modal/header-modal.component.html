@@ -1,0 +1,63 @@
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-container" id="modalContainer">
+        <div class="header-height">
+            <div class="header-height-logo">
+                <img class="header-height-logo-img" src="../../../assets/images/header/logo_red.png" alt="logo" (click)="closeModel()">
+                <i class="header-height-logo-icon fa-solid fa-sort-up fa-xl"></i>
+            </div>
+            <span class="close" (click)="closeModel()">&times;</span>
+        </div>
+        <div class="modal-layout row">
+            <div class="modal-layout-actions col-lg-6 col-md-6 col-xs-6">
+                <div class="row">
+                    <div class="modal-layout-actions-content col-lg-4 col-md-4 col-xs-4">
+                        <p class="modal-layout-actions-content-title">{{'header.modal.' + header.game.title + '.title'
+                            | translate}}</p>
+                        <div class="modal-layout-actions-content-list">
+                            <div class="modal-layout-actions-content-list-item"
+                                *ngFor="let item of header.game.items; let index = index"
+                                (mouseover)="onHoverItem(index, header.game)"
+                                (mouseout)="onMouseOut()"
+
+                            >
+                                {{'header.modal.game.' + item.title | translate}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-layout-actions-content col-lg-4 col-md-4 col-xs-4">
+                        <p class="modal-layout-actions-content-title">{{'header.modal.' + header.force.title + '.title'
+                            | translate}}</p>
+                        <div class="modal-layout-actions-content-list">
+                            <div class="modal-layout-actions-content-list-item"
+                            *ngFor="let item of header.force.items; let index = index"
+                            (mouseover)="onHoverItem(index, header.force)"
+                            (mouseout)="onMouseOut()"
+                        >
+                                {{'header.modal.force.' + item.title | translate}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-layout-actions-content col-lg-4 col-md-4 col-xs-4">
+                        <p class="modal-layout-actions-content-title">{{'header.modal.' + header.entertainment.title +
+                            '.title' |
+                            translate}}</p>
+                        <div class="modal-layout-actions-content-list">
+                            <div class="modal-layout-actions-content-list-item"
+                            *ngFor="let item of header.entertainment.items; let index = index"
+                            (mouseover)="onHoverItem(index, header.entertainment)"
+                            (mouseout)="onMouseOut()"
+                        >
+                                {{'header.modal.entertainment.' + item.title | translate}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-layout-img col-lg-6 col-md-6 col-xs-6">
+                <img class="modal-layout-img-item" src="{{imgSrc}}" alt="">
+                    <!-- <img class="modal-layout-img" src="../../../assets/images/games/arcane.jpg" alt=""> -->
+            </div>
+        </div>
+    </div>
+</div>

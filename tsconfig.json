@@ -2,6 +2,9 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "noImplicitAny": false,
+    "strictPropertyInitialization": false,
+    "suppressImplicitAnyIndexErrors": true,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -25,6 +28,7 @@
     ]
   },
   "angularCompilerOptions": {
+    "noImplicitAny": false,
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,

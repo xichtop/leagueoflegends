@@ -1,0 +1,14 @@
+<div class="new" (mouseover)="onMouseHover()" (mouseout)="onMouseOut()">
+  <div class="new-item">
+    <img class="new-item-img" [src]="srcImg" alt="background-new">
+    <div class="new-item-layout">
+      <p class="new-item-layout-title">{{title}}</p>
+      <p class="new-item-layout-main">{{mainTitle}}</p>
+      <p class="new-item-layout-content">{{content}}</p>
+    </div>
+  </div>
+  <div class="new-frame">
+    <canvas width="440px" height="180px" class="video-inner-frame-canvas" [id]="'canvas-new-' + index"></canvas>
+  </div>
+</div>
+

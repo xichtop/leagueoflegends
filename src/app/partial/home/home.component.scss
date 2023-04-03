@@ -1,0 +1,728 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixin';
+@import '../../../assets/scss/animation';
+
+.video {
+  position: relative;
+  margin-top: $header-height;
+
+  &-background {
+    &-main {
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      object-fit: cover;
+    }
+
+    &-blur {
+      width: 100%;
+      height: 500px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $color-black;
+      opacity: 0.7;
+    }
+  }
+
+  &-inner {
+    &-main {
+      width: 1399px;
+      height: 500px;
+      object-fit: cover;
+      position: absolute;
+      top: 60px;
+      left: 60px;
+    }
+
+    &-frame {
+      &-canvas {
+        position: absolute;
+        top: 50px;
+        left: 70px;
+      }
+    }
+
+    &-title {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @include flex(center, center);
+      flex-direction: column;
+
+      &-img {
+        width: 600px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.new {
+  // background-image: url(../../../assets/images/background/caro.jpg);
+  background-color: #f7f7f7;
+  height: 380px;
+  margin-top: -9px;
+
+  &-space {
+    height: 120px;
+  }
+
+  &-container {
+    position: relative;
+
+    &-title {
+      position: absolute;
+      display: flex;
+      left: -45px;
+      top: 70px;
+      transform: rotate(90deg);
+
+      &-text {
+        text-transform: uppercase;
+        color: $color-black;
+      }
+
+      i {
+        padding-top: 2px;
+        padding-left: 10px;
+      }
+    }
+
+    &-items {
+      @include flex(center, space-between);
+      flex-direction: row;
+      padding: 0 40px;
+    }
+  }
+
+  &-button {
+    @include flex(center, flex-end);
+    cursor: pointer;
+    margin-right: 50px;
+    margin-top: 25px;
+
+    &-title {
+
+      @include flex(center, center);
+
+      &:hover &-icons {
+        transform: translateX(6px);
+      }
+
+      p {
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+
+      &-icons {
+        @include flex(center, center);
+        padding-left: 10px;
+        color: $color-blue;
+        transform: translateX(0);
+        transition: transform 300ms ease-in-out ;
+
+        i:first-child {
+          font-size: 2px;
+          padding-right: 3px;
+        }
+      }
+    }
+  }
+}
+
+.champions {
+  position: relative;
+  margin-top: 50px;
+  overflow: hidden;
+
+  &-title {
+    position: absolute;
+    display: flex;
+    left: -12px;
+    top: 70px;
+    transform: rotate(90deg);
+
+    &-text {
+      text-transform: uppercase;
+      color: $color-black;
+    }
+
+    i {
+      padding-top: 2px;
+      padding-left: 10px;
+    }
+  }
+
+  &-header {
+    @include flex(center, center);
+    flex-direction: column;
+    margin: 0 auto;
+    width: 40%;
+
+    &-title {
+      font-size: 32px;
+      font-family: Lexend;
+      text-transform: uppercase;
+    }
+
+    &-main {
+      font-size: 46px;
+      font-family: Lexend;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    &-quote {
+      font-size: 16px;
+      text-align: center;
+    }
+
+    &-button {
+      @include flex(center, center);
+      margin-top: 20px;
+
+      second-button {
+        margin: 0 20px;
+      }
+    }
+  }
+
+  &-introduce {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    &-slide {
+      width: 50%;
+      aspect-ratio : 1 / 1;
+
+      &-progress {
+        margin-top: 270px;
+
+        &-icon {
+          @include flex(center, center);
+          flex-direction: row;
+
+          &-item {
+            position: relative;
+            width: 45px;
+            margin: 0 30px;
+
+            &:hover &-container-img {
+              filter: invert(0%);
+              transform: translateY(-15px) scale(1.15, 1.15);
+            }
+
+            &:hover &-container-title {
+              filter: invert(0%);
+            }
+
+            &-container {
+              @include flex(center, center);
+              flex-direction: column;
+              cursor: pointer;
+
+              &-img {
+                width: 26px;
+                filter: invert(50%);
+                transform: translateY(0) scale(1, 1);
+                transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, fill 0.2s ease-in-out 0s;
+              }
+
+              &-title {
+                text-transform: uppercase;
+                padding-top: 10px;
+                font-size: 10px;
+                font-weight: 600;
+                filter: invert(50%);
+              }
+            }
+
+            &-frame {
+              display: none;
+              filter: invert(58%) sepia(49%) saturate(580%) hue-rotate(1deg) brightness(92%) contrast(92%);
+              width: 40px;
+              margin-top: -100px;
+              transform: scale(1.8, 1.8);
+              top: -25px;
+              left: 0;
+            }
+
+            &-point {
+              width: 10px;
+              height: 10px;
+              border-radius: 100%;
+              position: absolute;
+              top: 77px;
+              left: 13px;
+              z-index: 2;
+              background-color: $color-black;
+              filter: invert(50%);
+            }
+
+            &-line {
+              width: 2px;
+              height: 0;
+              border-radius: 2px;
+              position: absolute;
+              top: 31px;
+              left: 17px;
+              z-index: 2;
+              background-color: $color-yellow;
+              visibility: hidden;
+              // transform: translateY(-25px);
+              transition: height ease-in-out 100ms;
+            }
+          }
+        }
+
+        &-line {
+          position: relative;
+          height: 1px;
+          width: 100%;
+          margin-top: 30px;
+          background-color: $color-line;
+          z-index: 3;
+
+          &-active {
+            position: absolute;
+            transform: translateX(0);
+            transition: transform ease-in-out 300ms;
+
+            &-point {
+              width: 10px;
+              height: 10px;
+              border-radius: 100%;
+              background-color: $color-yellow;
+              position: absolute;
+              top: -4px;
+              z-index: 5;
+              transform: translateX(108px);
+            }
+
+            &-frame {
+              width: 20px;
+              height: 20px;
+              margin: -10px 0px 0px -10px;
+              border: 2px solid currentcolor;
+              border-radius: 100%;
+              color: $color-yellow;
+              position: absolute;
+              top: 1px;
+              z-index: 4;
+              transform: translateX(112px);
+            }
+          }
+        }
+      }
+
+      &-video {
+        @include flex(center, center);
+        padding-top: 40px;
+        &-item {
+          width: 70%;
+        }
+      }
+    }
+
+    &-hero {
+      width: 50%;
+      aspect-ratio : 1 / 1;
+      position: relative;
+
+      &-frame {
+        width: 93%;
+        height: 93%;
+        border-radius: 100%;
+        color: $color-line;
+        border: 1px solid currentcolor;
+      }
+
+      &-animation {
+        width: 93%;
+        height: 93%;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        &-first {
+          position: absolute;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          border-radius: 100%;
+          border-right: 4px solid transparent;
+          border-bottom: 4px solid $color-yellow;
+          border-left: 4px solid transparent;
+          border-top: 4px solid transparent;
+          transform: rotate(0deg);
+          transition: transform 7000ms ease-in-out;
+        }
+
+        &-second {
+          position: absolute;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          border-radius: 100%;
+          border-right: 4px solid transparent;
+          border-bottom: 4px solid $color-yellow;
+          border-left: 4px solid transparent;
+          border-top: 4px solid transparent;
+          transform: rotate(120deg);
+          transition: transform 7000ms ease-in-out;
+        }
+
+        &-third {
+          position: absolute;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          border-radius: 100%;
+          border-right: 4px solid transparent;
+          border-bottom: 4px solid $color-yellow;
+          border-left: 4px solid transparent;
+          border-top: 4px solid transparent;
+          transform: rotate(240deg);
+          transition: transform 7000ms ease-in-out;
+        }
+
+        &-active &-first {
+          transform: rotate(360deg);
+        }
+
+        &-active &-second {
+          transform: rotate(480deg);
+        }
+
+        &-active &-third {
+          transform: rotate(600deg);
+        }
+      }
+
+      &-item {
+        &-img {
+          position: absolute;
+          top: -40px;
+          left: 0;
+          height: 100%;
+
+          clip-path: polygon(100% 100%, 100% 100%, 100% 100%);
+          animation-duration: 2s;
+          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+
+        &-appear &-img {
+          animation-name: slideout;
+          clip-path: polygon(100% 0%, 100% 200%, -100% 0%);
+        }
+      }
+    }
+  }
+
+  &-active &-introduce {
+      &-slide {
+        &-progress {
+          &-icon {
+            &-item {
+              &-container {
+
+                transform: translateY(-25px);
+
+                &-img {
+                  filter: invert(0%);
+                  transform: translateY(-15px) scale(1.15, 1.15);
+                }
+
+                &-title {
+                  filter: invert(0%);
+                }
+              }
+
+              &-frame {
+                display: block;
+              }
+
+              &-point {
+                transform: translateY(-25px);
+              }
+
+              &-line {
+                height: 16px;
+                visibility: visible;
+              }
+            }
+          }
+        }
+      }
+  }
+
+  &-background {
+
+    &-img {
+      position: absolute;
+      top: 50px;
+      left: 30%;
+      filter: invert(50%);
+      width: 40%;
+      margin: 0 auto;
+      z-index: -1;
+      opacity: 0.1;
+    }
+  }
+}
+
+.assassin {
+  transform: translateX(0);
+}
+
+.fighter {
+  transform: translateX(105px);
+}
+
+.mage {
+  transform: translateX(210px);
+}
+
+.archer {
+  transform: translateX(315px);
+}
+
+.support {
+  transform: translateX(420px);
+}
+
+.tanker {
+  transform: translateX(525px);
+}
+
+.skin {
+  position: relative;
+  background: linear-gradient(rgb(255, 255, 255) 0%, rgb(184, 242, 255) 60%, $color-black 20%);
+  height: 1000px;
+  overflow: hidden;
+
+  &:hover &-background-main {
+    transform: translate3d(0, 0, 0);
+  }
+
+  &:hover &-background-second {
+    transform: translate3d(0, 0, 0);
+  }
+
+  &:hover &-champion {
+    transform: translate3d(-3px, 1px, 1px);
+  }
+
+  &:hover &-text {
+    transform: translate3d(-3px, 1px, 1px);
+  }
+
+  &-title {
+    position: absolute;
+    display: flex;
+    left: -50px;
+    top: 500px;
+    transform: rotate(90deg);
+    z-index: 2;
+
+    &-text {
+      text-transform: uppercase;
+      color: $color-white;
+    }
+
+    i {
+      padding-top: 2px;
+      padding-left: 10px;
+      color: $color-white;
+    }
+  }
+
+  &-background {
+    &-main {
+      position: absolute;
+      top: -180px;
+      width: 100%;
+      transform: translate3d(0, 5px, -2px);
+      transition: transform 1s ease-in-out;
+    }
+
+    &-second {
+      position: absolute;
+      top: -180px;
+      width: 100%;
+      transform: translate3d(1.84518px, 35.0142px, -2px);
+      transition: transform 1s ease-in-out;
+    }
+  }
+
+  &-champion {
+    transform: translate3d(0, 0, 0);
+    transition: transform 1s ease-in-out;
+
+    &-img {
+      position: absolute;
+      left: 30%;
+      top: 100px;
+      width: 40%;
+      clip-path: polygon(100% 100%, 100% 100%, 100% 100%);
+      animation-duration: 2s;
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      z-index: 2;
+    }
+
+    &-active &-img {
+      animation-name: slidein;
+      z-index: 3;
+    }
+
+    &-active-2 &-img {
+      animation-name: slideout;
+    }
+
+    &-frame {
+      position: absolute;
+      left: 35%;
+      top: 200px;
+      width: 500px;
+      height: 500px;
+      border: 2px solid $color-blue;
+      transform: rotate(45deg);
+      z-index: 1;
+    }
+  }
+
+  &-text {
+    position: absolute;
+    top: 35%;
+    left: 65%;
+    @include flex(center, center);
+    flex-direction: column;
+    margin: 0 auto;
+    width: 35%;
+    text-align: center;
+    color: $color-white;
+    transform: translate3d(0, 0, 0);
+    transition: transform 1s ease-in-out;
+    z-index: 11;
+
+    &-title {
+      font-size: 32px;
+      font-weight: 600;
+      font-family: Lexend;
+      text-transform: uppercase;
+    }
+
+    &-main {
+      line-height: 70px;
+      font-size: 56px;
+      font-family: Lexend;
+      font-weight: 1000;
+      text-transform: uppercase;
+    }
+
+    &-quote {
+      font-size: 16px;
+    }
+
+    &-button {
+      @include flex(center, center);
+      margin-top: 20px;
+
+      second-button {
+        margin: 0 20px;
+      }
+    }
+  }
+
+  &-canvas {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+    canvas {
+      z-index: 2;
+    }
+  }
+}
+
+.way {
+  position: relative;
+  height: 700px;
+  width: 100%;
+  background-color: $color-black;
+
+  &:hover &-img {
+    transform: translateX(-60px);
+  }
+
+  &-title {
+    position: absolute;
+    display: flex;
+    left: -20px;
+    top: 40%;
+    transform: rotate(90deg);
+    z-index: 2;
+
+    &-text {
+      text-transform: uppercase;
+      color: $color-white;
+    }
+
+    i {
+      padding-top: 2px;
+      padding-left: 10px;
+      color: $color-white;
+    }
+  }
+
+  &-img {
+    width: 65%;
+    transform: translateX(-80px);
+    transition: transform 2500ms ease-in-out;
+  }
+
+  &-header {
+    @include flex(center, center);
+    flex-direction: column;
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    width: 50%;
+    text-align: center;
+    color: $color-white;
+
+    &-title {
+      font-size: 26px;
+      font-weight: 600;
+      font-family: Lexend;
+      text-transform: uppercase;
+    }
+
+    &-main {
+      font-size: 56px;
+      font-family: Lexend;
+      font-weight: 1000;
+      text-transform: uppercase;
+    }
+
+    &-quote {
+      font-size: 16px;
+    }
+
+    &-button {
+      @include flex(center, center);
+      margin-top: 20px;
+
+      main-button {
+        margin: 0 20px;
+      }
+    }
+  }
+
+}

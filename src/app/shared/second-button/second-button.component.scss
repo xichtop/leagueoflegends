@@ -1,0 +1,38 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixin';
+
+.main-button {
+  @include flex(center, center);
+  position: relative;
+  cursor: pointer;
+  width: $second-button-width;
+  height: $second-button-height;
+
+
+  &-label {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: $color-white;
+    font-size: 12px;
+    padding: 0 15px;
+    z-index: 10;
+  }
+
+  &-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $second-button-height;
+    width: 100%;
+  }
+}
+
+.main-bg {
+  background-color: $color-blue;
+}
+
+.second-bg {
+  background-color: $color-yellow;
+}
+

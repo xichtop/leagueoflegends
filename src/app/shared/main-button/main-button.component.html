@@ -1,0 +1,12 @@
+<div class="main-button"
+    [ngClass]="color == 'main' ? 'main-bg' : 'second-bg'"
+    (mouseover)="onMouseHover()" (mouseout)="onMouseOut()"
+    (click)="onButtonClick()">
+  <p class="main-button-label">
+    {{label}}
+  </p>
+  <div class="main-button-frame">
+    <canvas width="215px" height="75px" #canvasButton></canvas>
+  </div>
+</div>
+

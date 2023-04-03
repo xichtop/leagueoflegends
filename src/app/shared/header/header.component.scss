@@ -1,0 +1,125 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixin";
+
+.header {
+  @include flex(center, space-between);
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: $header-height;
+  background-color: $color-black;
+
+  &--logo {
+    @include flex(center, space-around);
+
+    &--riot {
+      &--img {
+        width: 8rem;
+        margin: 0 10px 0 30px;
+        cursor: pointer;
+      }
+
+      &--icon {
+        color: $color-white;
+      }
+
+      &:hover &--icon {
+        color: $color-red;
+      }
+    }
+
+    &--lol {
+      width: 2rem;
+      margin: 0 30px 0 30px;
+      cursor: pointer;
+    }
+
+    &--actions {
+      @include flex(center, space-between);
+
+      &--item {
+        margin-right: 4px;
+        margin-bottom: -1rem;
+
+        &:after {
+          display: block;
+          content: "";
+          width: 100%;
+          border-bottom: solid 5px $color-blue;
+          border-radius: 5px;
+          transform: scaleX(0);
+          transition: transform 300ms ease-in-out;
+        }
+
+        &:hover:after {
+          transform: scaleX(1);
+        }
+
+        p {
+          text-transform: uppercase;
+          font-family: Lexend;
+          font-weight: 600;
+          color: $color-white;
+          padding: 7.5px 16px;
+          cursor: pointer;
+          font-size: 14px;
+          margin-bottom: 10px;
+
+          &:hover {
+            background-color: $color-hover;
+            border-radius: 6px;
+          }
+        }
+      }
+    }
+  }
+
+  &--user {
+    @include flex(center, center);
+
+    &--flag {
+      cursor: pointer;
+      width: 30px;
+      margin-right: 20px;
+    }
+
+    &--signin {
+      color: $color-white;
+      background-color: $color-hover;
+      padding: 4px 16px;
+      border-radius: 5px;
+      margin-bottom: 0;
+      margin-right: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    &--playnow {
+      color: $color-black;
+      background-color: $color-blue;
+      padding: 4px 16px;
+      border-radius: 5px;
+      margin-bottom: 0;
+      margin-right: 40px;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+}
+
+// .saturate { filter: saturate(3); }
+// .grayscale { filter: grayscale(100%); }
+// .contrast { filter: contrast(160%); }
+// .brightness { filter: brightness(0); }
+// .blur { filter: blur(3px); }
+// .invert { filter: invert(100%); }
+// .sepia { filter: sepia(100%); }
+// .huerotate { filter: hue-rotate(180deg); }
+// .rss.opacity { filter: opacity(50%); }

@@ -1,0 +1,90 @@
+{
+    "header": {
+        "game": "Game",
+        "champions": "Champions",
+        "news": "News",
+        "update": "Patch notes",
+        "discover": "Discover",
+        "esports": "Esports",
+        "universe": "Universe",
+        "support": "Support",
+        "signIn": "Sign in",
+        "playNow": "play Now",
+        "modal": {
+            "game": {
+                "title": "Games",
+                "lol": "League Of Legends",
+                "valorant": "Valorant",
+                "tft": "Teamfight Tactics",
+                "lor": "Legends of Runeterra",
+                "lwr": "Lol Wild Rift"
+            },
+            "force": {
+                "title": "Force",
+                "cr": "Conv/Rgence",
+                "hm": "Hextech Mayhem",
+                "tm": "The Megeseeker",
+                "rk": "Ruined King",
+                "son": "Song of Nunu",
+                "riot": "Riot forge games"
+            },
+            "entertainment": {
+                "title": "Entertainment",
+                "arcane": "Arcane",
+                "universe": "Universe",
+                "rgm": "Riot game music"
+            }
+        }
+    },
+    "new": {
+      "title": "Featured news",
+      "viewAll": "View All"
+    },
+    "champions": {
+      "title": "Champions",
+      "choose": "Choose your",
+      "champion": "Champion",
+      "quote": "Whether you like to dive straight into the fray, support your teammates, or something in between, there's a spot for you on the Rift.",
+      "hero": {
+        "assassin": "Assassin",
+        "fighter": "Fighter",
+        "mage": "Mage",
+        "archer": "Archer",
+        "support": "Support",
+        "tanker": "Tanker"
+      }
+    },
+    "skin": {
+      "title": "Champion skins",
+      "slayEnemy": "Slay the enemy by",
+      "byGandyWay": "By the gandy way",
+      "quote": "Make it personal by changing up the look of your favorite champions with skins."
+    },
+    "way": {
+      "title": "How to play",
+      "start": "Let's start",
+      "legend": "Your legend",
+      "quote": "New to League? Get a rundown on the basics for the most popular game mode."
+    },
+    "button": {
+      "playFree": "Join for free",
+      "playNow": "Play now",
+      "discoverMoreChampions": "Discover more champions",
+      "start": "Get started"
+    },
+    "footer": {
+      "banner": {
+        "aboutLol": "About League of Legends",
+        "support": "Support",
+        "esports": "Esports"
+      },
+      "license": {
+        "text": "™ &amp; © 2023 Riot Games, Inc.  League of Legends and all related logos, characters, names and distinctive likenesses thereof are exclusive property of Riot Games, Inc.  All Rights Reserved."
+      },
+      "privacy": {
+        "notice": "Privacy notice",
+        "service": "Terms of service",
+        "cookie": "Cookies references"
+      }
+    }
+}

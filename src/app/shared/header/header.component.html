@@ -1,0 +1,49 @@
+<div class="header">
+    <div class="header--logo">
+        <div class="header--logo--riot">
+            <img class="header--logo--riot--img" src="../../../assets/images/header/logo_red.png" alt="logo" (click)="openModel()">
+            <i class="header--logo--riot--icon fa-solid fa-sort-down fa-xl"></i>
+        </div>
+        <img class="header--logo--lol" src="../../../assets/images/header/lol_logo.png" alt="logo_lol">
+        <div class="header--logo--actions">
+            <div class="header--logo--actions--item">
+                <p>{{'header.game' | translate}}</p>
+                <div class="header--logo--actions--item--underline"></div>
+            </div>
+            <div class="header--logo--actions--item">
+                <p>{{'header.champions' | translate}}</p>
+            </div>
+            <div class="header--logo--actions--item">
+                <p>{{'header.news' | translate}}</p>
+            </div>
+            <div class="header--logo--actions--item">
+                <p>{{'header.discover' | translate}}</p>
+            </div>
+            <div class="header--logo--actions--item">
+                <p>{{'header.esports' | translate}}</p>
+            </div>
+            <div class="header--logo--actions--item">
+                <p>{{'header.universe' | translate}}</p>
+            </div>
+            <div class="header--logo--actions--item">
+                <p>{{'header.support' | translate}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="header--user">
+        <!-- <i class="header--user--icon fa-solid fa-globe fa-xl" (click)="changeLanguage()"></i> -->
+        <img class="header--user--flag" src="../../../assets/images/header/vietnam_flag.png"
+            alt="flag" *ngIf="language === 'en'" (click)="changeLanguage('vn')">
+        <img class="header--user--flag" src="../../../assets/images/header/usa_flag.png"
+            alt="flag" *ngIf="language === 'vn'" (click)="changeLanguage('en')">
+        <p class="header--user--signin">
+            {{'header.signIn' | translate}}
+        </p>
+        <p class="header--user--playnow">
+            {{'header.playNow' | translate}}
+        </p>
+    </div>
+</div>
+
+<header-modal></header-modal>

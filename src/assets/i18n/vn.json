@@ -1,0 +1,90 @@
+{
+    "header": {
+        "game": "Trò chơi",
+        "champions": "Tướng",
+        "news": "Tin tức",
+        "update": "Chi tiết cập nhật",
+        "discover": "Khám phá",
+        "esports": "Esports",
+        "universe": "Vũ trụ",
+        "support": "Hổ trợ",
+        "signIn": "Đăng nhập",
+        "playNow": "Chơi ngay",
+        "modal": {
+            "game": {
+                "title": "Trò chơi",
+                "lol": "Liên minh huyền thoại",
+                "valorant": "Valorant",
+                "tft": "Đấu trường chân lý",
+                "lor": "Huyền thoại Runeterra",
+                "lwr": "LMHT: Tốc chiến"
+            },
+            "force": {
+                "title": "Force",
+                "cr": "Conv/Rgence",
+                "hm": "Hextech Mayhem",
+                "tm": "The Megeseeker",
+                "rk": "Ruined King",
+                "son": "Song of Nunu",
+                "riot": "Trò chơi của Riot"
+            },
+            "entertainment": {
+                "title": "Giải trí",
+                "arcane": "Arcane",
+                "universe": "Vũ trụ",
+                "rgm": "Riot game music"
+            }
+        }
+    },
+    "new": {
+      "title": "Tin tức tiêu biểu",
+      "viewAll": "Xem tất cả"
+    },
+    "champions": {
+      "title": "Tướng",
+      "choose": "Chọn ngay một",
+      "champion": "Tướng",
+      "quote": "Cho dù thích lao vào giao tranh, thích hỗ trợ đồng đội hoặc cả hai, bạn sẽ luôn tìm thấy vị trí thích hợp dành cho mình trong Summoner's Rift.",
+      "hero": {
+        "assassin": "Sát thủ",
+        "fighter": "Đấu sĩ",
+        "mage": "Pháp sư",
+        "archer": "Xạ thủ",
+        "support": "Hổ trợ",
+        "tanker": "Đỡ đòn"
+      }
+    },
+    "skin": {
+      "title": "Trang phục tướng",
+      "slayEnemy": "Hạ gục kẻ địch",
+      "byGandyWay": "một cách sang chảnh",
+      "quote": "Thay đổi diện mạo các vị tướng yêu thích với trang phục để tạo nên điểm nhấn của riêng bạn."
+    },
+    "way": {
+      "title": "Cách chơi",
+      "start": "Hãy bắt đầu",
+      "legend": "Huyền thoại của bạn",
+      "quote": "Bạn Là Lính Mới? Hãy xem tóm tắt những điều cơ bản về chế độ chơi phổ biến nhất."
+    },
+    "button": {
+      "playFree": "Chơi miễn phí",
+      "playNow": "Chơi ngay",
+      "discoverMoreChampions": "Khám phá thêm các vị tướng",
+      "start": "Bắt đầu"
+    },
+    "footer": {
+      "banner": {
+        "aboutLol": "Về liên minh huyền thoại",
+        "support": "hổ trợ",
+        "esports": "Trang Esports chính"
+      },
+      "license": {
+        "text": "© 2009-2022 bởi Tập Đoàn Riot Games. LIÊN MINH HUYỀN THOẠI và mọi logo liên quan là nhãn hiệu, nhãn hiệu dịch vụ và/hoặc nhãn hiệu đã đăng ký của Tập Đoàn Riot Games."
+      },
+      "privacy": {
+        "notice": "Chính sách bảo mật",
+        "service": "Điều khoản sử dụng",
+        "cookie": "Tùy chọn cookies"
+      }
+    }
+}

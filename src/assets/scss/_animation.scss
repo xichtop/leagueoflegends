@@ -1,0 +1,19 @@
+@keyframes slidein {
+  from {
+    clip-path: polygon(100% 0%, 100% 200%, -100% 0%);
+  }
+
+  to {
+    clip-path: polygon(100% 0%, 100% 0%, 100% 0%);
+  }
+}
+
+@keyframes slideout {
+  from {
+    clip-path: polygon(100% 0%, 100% 0%, 100% 0%);
+  }
+
+  to {
+    clip-path: polygon(100% 0%, 100% 200%, -100% 0%);
+  }
+}

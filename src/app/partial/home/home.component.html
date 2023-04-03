@@ -1,0 +1,272 @@
+<div class="video">
+  <div class="video-background">
+    <video autoplay loop muted class="video-background-main">
+      <source src="../../../assets/images/videos/hero-0632cbf2872c5cc0dffa93d2ae8a29e8.webm" type="video/webm">
+      Your browser does not support the video tag
+    </video>
+    <div class="video-background-blur"></div>
+  </div>
+  <div class="video-inner">
+    <video autoplay loop muted class="video-inner-main">
+      <source src="../../../assets/images/videos/hero-0632cbf2872c5cc0dffa93d2ae8a29e8.webm" type="video/webm">
+      Your browser does not support the video tag
+    </video>
+    <div class="video-inner-frame">
+      <canvas width="1399px" height="500px" class="video-inner-frame-canvas" id="canvas-video"></canvas>
+    </div>
+    <div class="video-inner-title">
+      <img class="video-inner-title-img" [src]="titleImgSrc"/>
+      <main-button [label]="'button.playFree' | translate" [color]="'main'"
+        (onClick)="onPlayFree()"
+      >
+      </main-button>
+    </div>
+  </div>
+</div>
+<div class="new">
+  <div class="new-space"></div>
+  <div class="new-container">
+    <div class="new-container-title">
+      <p class="new-container-title-text">{{'new.title' | translate}}</p>
+      <i class="fa-solid fa-minus"></i>
+    </div>
+    <div class="new-container-items">
+      <ng-container *ngFor="let newItem of newList; let index = index">
+        <new [srcImg]="newItem.imgURL" [title]="newItem.title"
+          [mainTitle]="newItem.mainTitle" [content]="newItem.content"
+          [index]="index"></new>
+      </ng-container>
+    </div>
+  </div>
+  <div class="new-button">
+    <div class="new-button-title">
+      <p>
+        {{'new.viewAll' | translate}}
+      </p>
+      <div class="new-button-title-icons">
+        <i class="fa-solid fa-circle"></i>
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="champions">
+  <div class="champions-title">
+    <p class="champions-title-text">{{'champions.title' | translate}}</p>
+    <i class="fa-solid fa-minus"></i>
+  </div>
+  <div class="champions-header">
+    <p class="champions-header-title">{{'champions.choose' | translate}}</p>
+    <p class="champions-header-main">{{'champions.champion' | translate}}</p>
+    <p class="champions-header-quote">{{'champions.quote' | translate}}</p>
+    <div class="champions-header-button">
+      <second-button [label]="'button.discoverMoreChampions' | translate" [color]="'main'"></second-button>
+      <second-button [label]="'button.playNow' | translate" [color]="'second'"></second-button>
+    </div>
+  </div>
+  <div class="champions-introduce">
+    <div class="champions-introduce-slide">
+      <div class="champions-introduce-slide-progress">
+        <div class="champions-introduce-slide-progress-icon">
+          <div class="champions-introduce-slide-progress-icon-item" [ngClass]="{'champions-active' : indexHero === 0}"
+            (click)="onChangeHero(0)">
+            <div class="champions-introduce-slide-progress-icon-item-container">
+              <img src="../../../assets/images/hero/assassin.svg" alt="icon-hero"
+                class="champions-introduce-slide-progress-icon-item-container-img">
+              <span class="champions-introduce-slide-progress-icon-item-container-title">
+                {{'champions.hero.assassin' | translate}}
+              </span>
+            </div>
+            <img class="champions-introduce-slide-progress-icon-item-frame"
+                src="../../../assets/images/hero/frame.svg">
+            <div class="champions-introduce-slide-progress-icon-item-point"></div>
+            <div class="champions-introduce-slide-progress-icon-item-line"></div>
+          </div>
+          <div class="champions-introduce-slide-progress-icon-item" [ngClass]="{'champions-active' : indexHero === 1}"
+            (click)="onChangeHero(1)">
+            <div class="champions-introduce-slide-progress-icon-item-container">
+              <img src="../../../assets/images/hero/fighter.svg" alt="icon-hero"
+                class="champions-introduce-slide-progress-icon-item-container-img">
+              <span class="champions-introduce-slide-progress-icon-item-container-title">
+                {{'champions.hero.fighter' | translate}}
+              </span>
+            </div>
+            <img class="champions-introduce-slide-progress-icon-item-frame"
+                src="../../../assets/images/hero/frame.svg">
+            <div class="champions-introduce-slide-progress-icon-item-point"></div>
+            <div class="champions-introduce-slide-progress-icon-item-line"></div>
+          </div>
+          <div class="champions-introduce-slide-progress-icon-item" [ngClass]="{'champions-active' : indexHero === 2}"
+          (click)="onChangeHero(2)">
+            <div class="champions-introduce-slide-progress-icon-item-container">
+              <img src="../../../assets/images/hero/mage.svg" alt="icon-hero"
+                class="champions-introduce-slide-progress-icon-item-container-img">
+              <span class="champions-introduce-slide-progress-icon-item-container-title">
+                {{'champions.hero.mage' | translate}}
+              </span>
+            </div>
+            <img class="champions-introduce-slide-progress-icon-item-frame"
+                src="../../../assets/images/hero/frame.svg">
+            <div class="champions-introduce-slide-progress-icon-item-point"></div>
+            <div class="champions-introduce-slide-progress-icon-item-line"></div>
+          </div>
+          <div class="champions-introduce-slide-progress-icon-item"  [ngClass]="{'champions-active' : indexHero === 3}"
+          (click)="onChangeHero(3)">
+            <div class="champions-introduce-slide-progress-icon-item-container">
+              <img src="../../../assets/images/hero/archer.svg" alt="icon-hero"
+                class="champions-introduce-slide-progress-icon-item-container-img">
+              <span class="champions-introduce-slide-progress-icon-item-container-title">
+                {{'champions.hero.archer' | translate}}
+              </span>
+            </div>
+            <img class="champions-introduce-slide-progress-icon-item-frame"
+              src="../../../assets/images/hero/frame.svg">
+            <div class="champions-introduce-slide-progress-icon-item-point"></div>
+            <div class="champions-introduce-slide-progress-icon-item-line"></div>
+          </div>
+          <div class="champions-introduce-slide-progress-icon-item champions-active" [ngClass]="{'champions-active' : indexHero === 4}"
+          (click)="onChangeHero(4)">
+            <div class="champions-introduce-slide-progress-icon-item-container">
+              <img src="../../../assets/images/hero/support.svg" alt="icon-hero"
+                class="champions-introduce-slide-progress-icon-item-container-img">
+              <span class="champions-introduce-slide-progress-icon-item-container-title">
+                {{'champions.hero.support' | translate}}
+              </span>
+            </div>
+            <img class="champions-introduce-slide-progress-icon-item-frame"
+                src="../../../assets/images/hero/frame.svg">
+            <div class="champions-introduce-slide-progress-icon-item-point"></div>
+            <div class="champions-introduce-slide-progress-icon-item-line"></div>
+          </div>
+          <div class="champions-introduce-slide-progress-icon-item" [ngClass]="{'champions-active' : indexHero === 5}"
+          (click)="onChangeHero(5)">
+            <div class="champions-introduce-slide-progress-icon-item-container">
+              <img src="../../../assets/images/hero/tanker.svg" alt="icon-hero"
+                class="champions-introduce-slide-progress-icon-item-container-img">
+              <span class="champions-introduce-slide-progress-icon-item-container-title">
+                {{'champions.hero.tanker' | translate}}
+              </span>
+            </div>
+            <img class="champions-introduce-slide-progress-icon-item-frame"
+                src="../../../assets/images/hero/frame.svg">
+            <div class="champions-introduce-slide-progress-icon-item-point"></div>
+            <div class="champions-introduce-slide-progress-icon-item-line"></div>
+          </div>
+        </div>
+        <div class="champions-introduce-slide-progress-line">
+          <div class="champions-introduce-slide-progress-line-active"
+            [ngClass]="{
+              'assassin': indexHero === 0,
+              'fighter': indexHero === 1,
+              'mage': indexHero === 2,
+              'archer': indexHero === 3,
+              'support': indexHero === 4,
+              'tanker': indexHero === 5
+            }"
+          >
+            <div class="champions-introduce-slide-progress-line-active-point"></div>
+            <div class="champions-introduce-slide-progress-line-active-frame"></div>
+          </div>
+        </div>
+      </div>
+      <div class="champions-introduce-slide-video">
+        <video [src]="videoSrc" autoplay loop muted class="champions-introduce-slide-video-item"></video>
+      </div>
+    </div>
+    <div class="champions-introduce-hero">
+      <div class="champions-introduce-hero-frame"></div>
+      <div class="champions-introduce-hero-animation" [ngClass]="{'champions-introduce-hero-animation-active' : animation}">
+        <div class="champions-introduce-hero-animation-first" ></div>
+        <div class="champions-introduce-hero-animation-second"></div>
+        <div class="champions-introduce-hero-animation-third"></div>
+      </div>
+      <div class="champions-introduce-hero-item"
+        [ngClass]="{'champions-introduce-hero-item-appear' : indexHero === 0}">
+        <img class="champions-introduce-hero-item-img" src="../../../assets/images/hero/assassin.png">
+      </div>
+      <div class="champions-introduce-hero-item"
+        [ngClass]="{'champions-introduce-hero-item-appear' : indexHero === 1}">
+        <img class="champions-introduce-hero-item-img" src="../../../assets/images/hero/fighter.png">
+      </div>
+      <div class="champions-introduce-hero-item"
+        [ngClass]="{'champions-introduce-hero-item-appear' : indexHero === 2}">
+        <img class="champions-introduce-hero-item-img" src="../../../assets/images/hero/mage.png">
+      </div>
+      <div class="champions-introduce-hero-item"
+        [ngClass]="{'champions-introduce-hero-item-appear' : indexHero === 3}">
+        <img class="champions-introduce-hero-item-img" src="../../../assets/images/hero/archer.png">
+      </div>
+      <div class="champions-introduce-hero-item"
+        [ngClass]="{'champions-introduce-hero-item-appear' : indexHero === 4}">
+        <img class="champions-introduce-hero-item-img" src="../../../assets/images/hero/support.png">
+      </div>
+      <div class="champions-introduce-hero-item"
+        [ngClass]="{'champions-introduce-hero-item-appear' : indexHero === 5}">
+        <img class="champions-introduce-hero-item-img" src="../../../assets/images/hero/tanker.png">
+      </div>
+    </div>
+  </div>
+  <div class="champions-background">
+    <img [src]="iconHeroSrc" alt="icon-hero"
+        class="champions-background-img">
+  </div>
+</div>
+<div class="skin">
+  <div class="skin-title">
+    <p class="skin-title-text">{{'skin.title' | translate}}</p>
+    <i class="fa-solid fa-minus"></i>
+  </div>
+  <div class="skin-background">
+    <img src="../../../assets/images/skin/background-2.png" alt="bg-skin" class="skin-background-second"/>
+    <img src="../../../assets/images/skin/background-1.png" alt="bg-skin" class="skin-background-main"/>
+  </div>
+  <div class="skin-champion">
+    <div [ngClass]="{'skin-champion-active': indexSkin === 0}" [ngClass]="{'skin-champion-active-2': indexSkin === 1}">
+      <img src="../../../assets/images/skin/assasin-skin.png" alt="champion-skin"
+        class="skin-champion-img"/>
+    </div>
+    <div [ngClass]="{'skin-champion-active': indexSkin === 1}" [ngClass]="{'skin-champion-active-2': indexSkin === 2}">
+      <img src="../../../assets/images/skin/assasin-skin-1.png" alt="champion-skin"
+      class="skin-champion-img"/>
+    </div>
+    <div [ngClass]="{'skin-champion-active': indexSkin === 2}" [ngClass]="{'skin-champion-active-2': indexSkin === 3}">
+      <img src="../../../assets/images/skin/assasin-skin-2.png" alt="champion-skin"
+      class="skin-champion-img"/>
+    </div>
+    <div [ngClass]="{'skin-champion-active': indexSkin === 3}" [ngClass]="{'skin-champion-active-2': indexSkin === 0}">
+      <img src="../../../assets/images/skin/assasin-skin-3.png" alt="champion-skin"
+      class="skin-champion-img"/>
+    </div>
+    <div class="skin-champion-frame"></div>
+  </div>
+  <div class="skin-text">
+    <p class="skin-text-title">{{'skin.slayEnemy' | translate}}</p>
+    <p class="skin-text-main">{{'skin.byGandyWay' | translate}}</p>
+    <p class="skin-text-quote">{{'skin.quote' | translate}}</p>
+    <div class="skin-text-button">
+      <second-button [label]="'button.playNow' | translate" [color]="'second'"></second-button>
+    </div>
+  </div>
+  <div class="skin-canvas">
+    <canvas height="800px" width="1520px" id="canvas-skin"></canvas>
+  </div>
+</div>
+<div class="way">
+  <div class="way-title">
+    <p class="way-title-text">{{'way.title' | translate}}</p>
+    <i class="fa-solid fa-minus"></i>
+  </div>
+  <div class="way-img">
+    <img src="../../../assets/images/background/way-background.png" alt="way-bg">
+  </div>
+  <div class="way-header">
+    <p class="way-header-title">{{'way.start' | translate}}</p>
+    <p class="way-header-main">{{'way.legend' | translate}}</p>
+    <p class="way-header-quote">{{'way.quote' | translate}}</p>
+    <div class="way-header-button">
+      <main-button [label]="'button.start' | translate" [color]="'second'"></main-button>
+      <main-button [label]="'button.playFree' | translate" [color]="'main'"></main-button>
+    </div>
+  </div>
+</div>
